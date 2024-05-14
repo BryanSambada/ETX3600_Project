@@ -806,6 +806,7 @@ hitmiss(best_fit_tri_probit)
 RProbit_proposed = glm(rawreturn~log(VIX)+log(VIX/VIX_t1)+anlogp, data=tidy_Stock, family=binomial(link="probit"))
 summary(RProbit_proposed)
 round(hitmiss(RProbit_proposed),3)
+pR2(RProbit_proposed)
 AIC(RProbit_proposed)
 
 ##### Plotting####
